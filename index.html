@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Valti Moments Premium ✨ | Experiencias Gourmet</title>
+    
+    <!-- Open Graph / WhatsApp Preview Fix -->
+    <meta property="og:title" content="Valti Moments | Experiencias Gourmet ✨">
+    <meta property="og:description" content="Creamos experiencias con estilo para los momentos que más importan. Snack Bar, Chilaquiles y Hot Dogs premium en Veracruz.">
+    <meta property="og:image" content="https://vcard-valti-moments.vercel.app/assets/og-card.jpg?v=2">
+    <meta property="og:image:secure_url" content="https://vcard-valti-moments.vercel.app/assets/og-card.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vcard-valti-moments.vercel.app/">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/jpeg" href="assets/og-card.jpg">
+    <link rel="apple-touch-icon" href="assets/og-card.jpg">
+
+    <!-- Premium Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Anim Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+
+
+    <!-- SPLASH SCREEN -->
+    <div class="intro-splash" id="intro">
+        <div class="splash-unit" id="splash-logo">
+            <img src="assets/LOGO OFICIAL.jpg" alt="Logo Circular Valti">
+        </div>
+    </div>
+
+    <!-- DIGITAL MENU OVERLAY -->
+    <div class="menu-overlay" id="menu-view">
+        <i class="ri-close-line menu-close" onclick="closeMenu()"></i>
+        <h2 class="section-title-small">Catálogo Completo 📋</h2>
+        <p class="section-subtitle">Edición 2025-2026</p>
+        
+        <div class="menu-scroll">
+            <!-- SNACKS SALADOS -->
+            <div class="menu-category">
+                <h3><i class="ri-fire-line"></i> Barra de Snacks Salados</h3>
+                <p class="menu-cat-desc">A elegir 3 de cada categoría · Servicio refill 2 hrs</p>
+                <div class="menu-items-grid">
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🥔 Papas</span>
+                        <span class="menu-group-items">Saladas · Ruffles de queso · Doritos nacho · Flamming hot · Chicharrones · Palomitas · Platanitos fritos · Churritos</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🥕 Frutas y verduras</span>
+                        <span class="menu-group-items">Zanahoria · Jícama · Pepino · Piña · Sandía</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🍬 Gomitas</span>
+                        <span class="menu-group-items">Manguitos · Picafresas · Gusanitos · Panditas · Pingüinos</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🥜 Cacahuates</span>
+                        <span class="menu-group-items">Japoneses · Enchilados · Mezcla salada · Español · Chilito</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🍭 Dulces</span>
+                        <span class="menu-group-items">Pelón pelo rico · Paleta de corazón · Tamborsito · Banderillas de tamarindo · Pulparindo</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🌶️ Chilitos</span>
+                        <span class="menu-group-items">Chamoy · Valentina · Tajín · Botanera · Miguelito</span>
+                    </div>
+                </div>
+                <div class="menu-price-row">
+                    <div class="price-tag">50 PAX<br><strong>$3,500</strong><span>6oz</span></div>
+                    <div class="price-tag">100 PAX<br><strong>$5,150</strong><span>6oz</span></div>
+                    <div class="price-tag">150 PAX<br><strong>$6,800</strong><span>6oz</span></div>
+                    <div class="price-tag">200 PAX<br><strong>$8,450</strong><span>6oz</span></div>
+                </div>
+            </div>
+
+            <!-- SNACKS DULCES -->
+            <div class="menu-category">
+                <h3><i class="ri-cake-2-line"></i> Barra de Snacks Dulces</h3>
+                <p class="menu-cat-desc">A elegir 3 de cada categoría · Servicio refill 2 hrs</p>
+                <div class="menu-items-grid">
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🍓 Frutas</span>
+                        <span class="menu-group-items">Uvas · Fresas · Manzana · Plátano · Kiwi · Piña · Sandía</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🍩 Postres</span>
+                        <span class="menu-group-items">Trozos de brownie · Mini pretzels · Mini donas · Bombones de chocolate · Bombones · Oreo · Lunetas</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🍯 Jarabes</span>
+                        <span class="menu-group-items">Miel · Hershey's líquido · Lechera · Nutella</span>
+                    </div>
+                </div>
+                <div class="menu-price-row">
+                    <div class="price-tag">50 PAX<br><strong>$3,250</strong><span>6oz</span></div>
+                    <div class="price-tag">100 PAX<br><strong>$4,350</strong><span>6oz</span></div>
+                    <div class="price-tag">150 PAX<br><strong>$5,450</strong><span>6oz</span></div>
+                    <div class="price-tag">200 PAX<br><strong>$6,550</strong><span>6oz</span></div>
+                </div>
+            </div>
+
+            <!-- HOT CAKES -->
+            <div class="menu-category">
+                <h3><i class="ri-blaze-line"></i> Hot Cakes Bar + Toppings</h3>
+                <div class="menu-price-row">
+                    <div class="price-tag">50 pzas<br><strong>$4,150</strong></div>
+                    <div class="price-tag">100 pzas<br><strong>$5,400</strong></div>
+                    <div class="price-tag">150 pzas<br><strong>$6,650</strong></div>
+                    <div class="price-tag">200 pzas<br><strong>$7,900</strong></div>
+                </div>
+            </div>
+
+            <!-- HOT DOGS -->
+            <div class="menu-category">
+                <h3><i class="ri-bread-line"></i> Barra de Hot Dogs</h3>
+                <p class="menu-cat-desc">Base: Salchichas y medias noches</p>
+                <div class="menu-items-grid">
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">🌭 Paquete Clásico</span>
+                        <span class="menu-group-items">Tomate · Cebolla · Rajas · Papas trituradas (Doritos o Ruffles) · Catsup · Mayonesa · Mostaza · Mayonesa de sabor a elegir</span>
+                    </div>
+                    <div class="menu-item-group">
+                        <span class="menu-group-label">⭐ Paquete Premium</span>
+                        <span class="menu-group-items">Todo lo clásico + Piña · Tocino · Chorizo · Queso amarillo · Mayonesa guacamole · Mayonesa chipotle · Mayonesa habanero</span>
+                    </div>
+                </div>
+                <div class="menu-price-row">
+                    <div class="price-tag">50 pzas<br><strong>$2,850</strong><span>Clásico</span></div>
+                    <div class="price-tag">50 pzas<br><strong>$3,450</strong><span>Premium</span></div>
+                    <div class="price-tag">100 pzas<br><strong>$4,250</strong><span>Clásico</span></div>
+                    <div class="price-tag">100 pzas<br><strong>$5,050</strong><span>Premium</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <main class="app-frame" id="app">
+
+
+        
+        <!-- HERO SECTION -->
+        <header class="hero-section reveal">
+            <div class="hero-bg">
+                <img src="assets/Valti-nocturno.jpg" alt="Evento Valti" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="brand-prof-unit" data-tilt>
+                    <img src="assets/LOGO OFICIAL.jpg" alt="Perfil Valti">
+                </div>
+                
+                <h1 class="brand-name">Valti Moments</h1>
+                <p class="brand-tagline">Experiencias gastronómicas para eventos boutique</p>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge"><i class="ri-map-pin-2-fill"></i> Veracruz</div>
+                    <div class="badge"><i class="ri-star-fill"></i> +50 eventos</div>
+                    <div class="badge"><i class="ri-time-fill"></i> Servicio 2 hrs</div>
+                </div>
+
+                <div class="action-grid">
+                    <a href="https://www.instagram.com/valtimoments/" target="_blank" class="action-pill"><i class="ri-instagram-line"></i></a>
+                    <a href="https://wa.me/522292451954" target="_blank" class="action-pill wa-pill"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#" onclick="openMenu(); return false;" class="action-pill"><i class="ri-restaurant-line"></i></a>
+                    <a href="https://maps.app.goo.gl/veracruz" target="_blank" class="action-pill"><i class="ri-map-pin-line"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECONDARY CTA -->
+        <div class="secondary-cta reveal">
+            <button class="btn-secondary" onclick="openMenu()">
+                <i class="ri-menu-search-line"></i> Ver Catálogo Completo
+            </button>
+        </div>
+
+        <!-- CATALOGUE SECTION -->
+        <section class="reveal catalogue-section" style="position: relative; overflow: hidden; padding-top: 20px;">
+
+
+            <span class="section-label" style="position: relative; z-index: 2;">Nuestras Estaciones</span>
+            <div class="boho-card">
+                <div class="card-top"><img src="assets/valti-Snacks.jpg" alt="Snack Bar" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
+                <div class="card-desc">
+                    <h3>Barra de Snacks</h3>
+                    <p>Dulces y salados con refill 2 hrs. Gomitas, cacahuates, frutas, chilitos y más.</p>
+                    <span class="card-price" onclick="openForm()">Desde $3,250</span>
+                </div>
+            </div>
+
+            <div class="boho-card">
+                <div class="card-top"><img src="assets/Valti-hotdog.jpg" alt="Hot Dog Station" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
+                <div class="card-desc">
+                    <h3>Barra de Hot Dogs</h3>
+                    <p>Clásico o Premium. Toppings completos, aderezos especiales y tocino crujiente.</p>
+                    <span class="card-price" onclick="openForm()">Desde $2,850</span>
+                </div>
+            </div>
+
+            <div class="boho-card">
+                <div class="card-top"><img src="assets/Valti-hotcakes.jpg" alt="Hot Cakes Bar" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
+                <div class="card-desc">
+                    <h3>Hot Cakes Bar</h3>
+                    <p>Estacion interactiva con toppings premium: Nutella, frutas, bombones y jarabes.</p>
+                    <span class="card-price" onclick="openForm()">Desde $4,150</span>
+                </div>
+            </div>
+
+            <div class="boho-card hidden" id="catalogo-hmb" style="display:none;">
+                <div class="card-top"><img src="assets/Valti-hamburguesas.jpg" alt="Barra de Hamburguesas" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
+                <div class="card-desc">
+                    <h3>Barra de Hamburguesas</h3>
+                    <p>Pan, pollo empanizado, tomate, cebolla, lechuga, aderezos y papas a elegir.</p>
+                    <span class="card-price" onclick="openForm()">Cotizar paquete</span>
+                </div>
+            </div>
+
+            <div class="boho-card hidden" id="catalogo-chil" style="display:none;">
+                <div class="card-top"><img src="assets/Valti-chilaquiles.jpg" alt="Barra de Chilaquiles" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
+                <div class="card-desc">
+                    <h3>Barra de Chilaquiles</h3>
+                    <p>Salsa a elegir (verde/roja), proteína (pollo, huevo, carne), queso, crema y cebolla.</p>
+                    <span class="card-price" onclick="openForm()">Cotizar paquete</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div style="height: 120px;"></div>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!-- MULTI-STEP FORM OVERLAY (COTIZADOR REAL)     -->
+    <!-- ============================================ -->
+    <div class="form-overlay" id="form-view">
+        <div class="form-header">
+            <i class="ri-close-line" style="font-size: 1.5rem; cursor: pointer;" onclick="closeForm()"></i>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="form-progress"></div>
+            </div>
+            <span id="step-counter" style="font-size: 0.8rem; font-weight: 600; color: var(--primary);">1 / 8</span>
+        </div>
+
+        <div class="step-container">
+
+            <!-- ========== STEP 1: SERVICIOS ========== -->
+            <div class="step active" id="step-1">
+                <h2 class="step-title">¿Qué experiencia quieres?</h2>
+                <p class="step-desc">Elige la barra principal para tu evento.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="Snacks Salados" onclick="toggleService(this)">
+                        <i class="ri-fire-line"></i>
+                        <div>
+                            <strong>Barra de Snacks Salados</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Papas, gomitas, cacahuates, dulces y chilitos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Snacks Dulces" onclick="toggleService(this)">
+                        <i class="ri-cake-2-line"></i>
+                        <div>
+                            <strong>Barra de Snacks Dulces</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Frutas, postres, bombones y jarabes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Hot Cakes Bar" onclick="toggleService(this)">
+                        <i class="ri-blaze-line"></i>
+                        <div>
+                            <strong>Hot Cakes Bar + Toppings</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Estación interactiva con toppings premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Hot Dogs" onclick="toggleService(this)">
+                        <i class="ri-bread-line"></i>
+                        <div>
+                            <strong>Barra de Hot Dogs</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Paquete Clásico o Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card hidden" id="opt-hmb" data-val="Hamburguesas" style="display:none;" onclick="toggleService(this)">
+                        <i class="ri-restaurant-line"></i>
+                        <div>
+                            <strong>Barra de Hamburguesas</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Hamburguesa de pollo empanizado + papas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card hidden" id="opt-chil" data-val="Chilaquiles" style="display:none;" onclick="toggleService(this)">
+                        <i class="ri-bowl-line"></i>
+                        <div>
+                            <strong>Barra de Chilaquiles</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Salsa y proteína a elegir + complementos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 1b: SNACKS SALADOS DETALLE ========== -->
+            <div class="step" id="step-1b">
+                <h2 class="step-title" style="font-size: 1.2rem;">🔥 Arma tu Barra Salada</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Elige hasta 3 productos de cada categoría.</p>
+                
+                <div class="sub-step-scroll">
+                    <div class="cat-group">
+                        <p class="cat-group-title">🥔 Papas <span class="cat-counter" id="cnt-papas">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Saladas</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Ruffles de queso</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Doritos nacho</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Flamming hot</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Chicharrones</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Palomitas</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Platanitos fritos</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Churritos</div>
+                        </div>
+                    </div>
+                    <div class="cat-group">
+                        <p class="cat-group-title">🥕 Frutas y verduras <span class="cat-counter" id="cnt-fv">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Zanahoria</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Jícama</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Pepino</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Piña</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Sandía</div>
+                        </div>
+                    </div>
+                    <div class="cat-group">
+                        <p class="cat-group-title">🍬 Gomitas <span class="cat-counter" id="cnt-gomitas">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Manguitos</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Picafresas</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Gusanitos</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Panditas</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Pingüinos</div>
+                        </div>
+                    </div>
+                    <div class="cat-group">
+                        <p class="cat-group-title">🥜 Cacahuates <span class="cat-counter" id="cnt-cacahuates">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Japoneses</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Enchilados</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Mezcla salada</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Español</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Chilito</div>
+                        </div>
+                    </div>
+                    <div class="cat-group">
+                        <p class="cat-group-title">🍭 Dulces <span class="cat-counter" id="cnt-dulces_s">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Pelón pelo rico</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Paleta de corazón</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Tamborsito</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Banderillas de tamarindo</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Pulparindo</div>
+                        </div>
+                    </div>
+                    <div class="cat-group">
+                        <p class="cat-group-title">🌶️ Chilitos <span class="cat-counter" id="cnt-chilitos">0/3</span></p>
+                        <div class="topping-chips">
+                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Chamoy</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Valentina</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Tajín</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Botanera</div>
+                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Miguelito</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========== STEP 1c: SNACKS DULCES DETALLE (INFORMATIVO) ========== -->
+            <div class="step" id="step-1c">
+                <h2 class="step-title" style="font-size: 1.2rem;">🍓 Tu Barra Dulce Incluye Todo Esto:</h2>
+                <p class="step-desc" style="font-size: 0.85rem; line-height: 1.4;">Esta barra viene completa por defecto. Tus invitados disfrutarán de la variedad completa sin necesidad de que elijas sub-categorías.</p>
+                <div class="form-options">
+                    <div class="option-card selected" style="cursor: default; pointer-events: none;">
+                        <i class="ri-check-double-line" style="color: var(--primary);"></i>
+                        <div>
+                            <strong>Menú Completo de Dulces</strong>
+                            <div class="sub-options" style="margin-top: 5px;">
+                                <span class="sub-option"><b>Frutas (7 opciones):</b> Fresa, mango, uva, plátano, kiwi, manzana.</span>
+                                <span class="sub-option"><b>Postres y Complementos (7 opciones):</b> Bombones, brownies, galletas Oreo y chispas, pretzels, gomitas.</span>
+                                <span class="sub-option"><b>Jarabes (4 opciones):</b> Nutella, lechera, chocolate, cajeta.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 1d: HOT DOGS DETALLE ========== -->
+            <div class="step" id="step-1d">
+                <h2 class="step-title" style="font-size: 1.2rem;">🌭 Elige tu Paquete</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Base: Salchichas y medias noches.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="Paquete Clásico" onclick="selectStepOption(this, '1d_estilo')">
+                        <i class="ri-bread-line"></i>
+                        <div>
+                            <strong>Paquete Clásico</strong>
+                            <div class="sub-options">
+                                <span class="sub-option"><b>Toppings:</b> Tomate, cebolla, rajas, papas trituradas (Doritos o Ruffles)</span>
+                                <span class="sub-option"><b>Aderezos:</b> Catsup, mayonesa, mostaza + 1 mayo de sabor a elegir</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Paquete Premium" onclick="selectStepOption(this, '1d_estilo')">
+                        <i class="ri-star-smile-line"></i>
+                        <div>
+                            <strong>Paquete Premium</strong>
+                            <div class="sub-options">
+                                <span class="sub-option"><b>Todo lo clásico +</b> Piña, tocino picado, chorizo</span>
+                                <span class="sub-option"><b>Aderezos:</b> Mayo guacamole, chipotle, habanero + queso amarillo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========== STEP 1e: HAMBURGUESAS ========== -->
+            <div class="step" id="step-1e">
+                <h2 class="step-title" style="font-size: 1.2rem;">🍔 Arma tu Barra de Hamburguesas</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Incluye: Pan, pollo empanizado, tomate, cebolla, lechuga y aderezos.</p>
+                <div class="cat-group" style="text-align: left; margin-bottom: 20px;">
+                    <p class="cat-group-title">Elige tus papas (selecciona 1)</p>
+                    <div class="form-options">
+                        <div class="option-card" data-val="Papas Saladas" onclick="selectStepOption(this, '1e_papas')">
+                            <strong>Papas Saladas</strong>
+                        </div>
+                        <div class="option-card" data-val="Ruffles" onclick="selectStepOption(this, '1e_papas')">
+                            <strong>Ruffles</strong>
+                        </div>
+                        <div class="option-card" data-val="Doritos" onclick="selectStepOption(this, '1e_papas')">
+                            <strong>Doritos</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 1f: CHILAQUILES ========== -->
+            <div class="step" id="step-1f">
+                <h2 class="step-title" style="font-size: 1.2rem;">🥣 Arma tu Barra de Chilaquiles</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Incluye queso, crema y cebolla.</p>
+                
+                <div class="cat-group" style="text-align: left; margin-bottom: 15px;">
+                    <p class="cat-group-title">Elige la Salsa (selecciona 1)</p>
+                    <div class="form-grid" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div class="pill-option" data-val="Salsa Verde" onclick="selectStepOption(this, '1f_salsa')">Verde</div>
+                        <div class="pill-option" data-val="Salsa Roja" onclick="selectStepOption(this, '1f_salsa')">Roja</div>
+                    </div>
+                </div>
+
+                <div class="cat-group" style="text-align: left;">
+                    <p class="cat-group-title">Elige la Proteína (selecciona 1)</p>
+                    <div class="form-options">
+                        <div class="option-card" data-val="Pollo" onclick="selectStepOption(this, '1f_proteina')">
+                            <strong>Pollo</strong>
+                        </div>
+                        <div class="option-card" data-val="Huevo Cocido" onclick="selectStepOption(this, '1f_proteina')">
+                            <strong>Huevo Cocido</strong>
+                        </div>
+                        <div class="option-card" data-val="Carne" onclick="selectStepOption(this, '1f_proteina')">
+                            <strong>Carne</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 2: NÚMERO DE PERSONAS ========== -->
+            <div class="step" id="step-2">
+                <h2 class="step-title">¿Cuántos invitados?</h2>
+                <p class="step-desc">Esto define la cantidad de porciones y el precio.</p>
+                <div class="form-grid">
+                    <div class="pill-option" data-val="50" onclick="selectStepOption(this, 2)">
+                        <span class="pill-number">50</span>
+                        <span class="pill-label">personas</span>
+                    </div>
+                    <div class="pill-option" data-val="100" onclick="selectStepOption(this, 2)">
+                        <span class="pill-number">100</span>
+                        <span class="pill-label">personas</span>
+                    </div>
+                    <div class="pill-option" data-val="150" onclick="selectStepOption(this, 2)">
+                        <span class="pill-number">150</span>
+                        <span class="pill-label">personas</span>
+                    </div>
+                    <div class="pill-option" data-val="200" onclick="selectStepOption(this, 2)">
+                        <span class="pill-number">200</span>
+                        <span class="pill-label">personas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 2b: TAMAÑO DE VASO (solo si aplica snacks) ========== -->
+            <div class="step" id="step-2b">
+                <h2 class="step-title">Tamaño de vaso</h2>
+                <p class="step-desc">Aplica para las barras de snacks.</p>
+                <div class="form-grid">
+                    <div class="pill-option vaso-opt" data-val="6oz" onclick="selectStepOption(this, '2b')">
+                        <span class="pill-number">6 oz</span>
+                        <span class="pill-label">Estándar</span>
+                    </div>
+                    <div class="pill-option vaso-opt" data-val="12oz" onclick="selectStepOption(this, '2b')">
+                        <span class="pill-number">12 oz</span>
+                        <span class="pill-label">Grande (+$1,000 aprox)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 3: TIPO DE EVENTO ========== -->
+            <div class="step" id="step-3">
+                <h2 class="step-title">Tipo de evento</h2>
+                <div class="form-options">
+                    <div class="pill-option" data-val="Cumpleaños infantil" onclick="selectStepOption(this, 3)">Cumpleaños infantil</div>
+                    <div class="pill-option" data-val="Bautizo / Primera comunión" onclick="selectStepOption(this, 3)">Bautizo / Primera comunión</div>
+                    <div class="pill-option" data-val="Fiesta familiar" onclick="selectStepOption(this, 3)">Fiesta familiar</div>
+                    <div class="pill-option" data-val="Evento corporativo" onclick="selectStepOption(this, 3)">Evento corporativo</div>
+                    <div class="pill-option" data-val="Boda / XV Años" onclick="selectStepOption(this, 3)">Boda / XV Años</div>
+                    <div class="pill-option" data-val="Otro" onclick="selectStepOption(this, 3)">Otro</div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 4: FECHA ========== -->
+            <div class="step" id="step-4">
+                <h2 class="step-title">¿Cuándo es tu evento?</h2>
+                <p class="step-desc">Para revisar disponibilidad.</p>
+                <input type="date" id="event-date" class="form-input" onchange="validateStep(4)">
+            </div>
+
+            <!-- ========== STEP 5: LUGAR ========== -->
+            <div class="step" id="step-5">
+                <h2 class="step-title">¿Dónde será?</h2>
+                <p class="step-desc">Para estimar traslado y logística.</p>
+                <input type="text" id="event-location" class="form-input" placeholder="Ciudad o colonia" oninput="validateStep(5)">
+                <input type="text" id="event-venue" class="form-input" placeholder="Nombre del salón o domicilio" oninput="validateStep(5)">
+            </div>
+
+            <!-- ========== STEP 6: CONTACTO ========== -->
+            <div class="step" id="step-6">
+                <h2 class="step-title">Datos de contacto</h2>
+                <input type="text" id="contact-name" class="form-input" placeholder="Tu nombre" oninput="validateStep(6)">
+                <input type="tel" id="contact-wa" class="form-input" placeholder="Tu WhatsApp (10 dígitos)" oninput="validateStep(6)">
+            </div>
+
+            <!-- ========== STEP 7: RESUMEN + COTIZACIÓN ========== -->
+            <div class="step" id="step-7">
+                <h2 class="step-title">Tu Cotización ✨</h2>
+                <p class="step-desc">Revisa el resumen antes de enviarlo.</p>
+                <div id="quote-summary" class="quote-summary"></div>
+                <div class="quote-total" id="quote-total"></div>
+            </div>
+
+        </div>
+
+        <div class="form-nav">
+            <button class="btn-form btn-prev" id="btn-prev" onclick="changeStep(-1)" style="visibility: hidden;">Anterior</button>
+            <button class="btn-form btn-next" id="btn-next" onclick="changeStep(1)" disabled>Siguiente</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- LIGHTBOX OVERLAY                             -->
+    <!-- ============================================ -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Vista previa">
+    </div>
+
+    <!-- FLOATING CTA -->
+    <div class="fixed-cta reveal">
+        <button class="btn-boutique" onclick="openForm()">
+            Cotizar Mi Evento ✨
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/app.js" charset="UTF-8"></script>
+
+<!-- TREZE SIGNATURE -->
+<a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; justify-content: center; text-decoration: none; margin-top: 24px; margin-bottom: 24px; opacity: 0.6; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+    <img src="assets/footer.png" alt="Ingeniería Digital por Treze Labs" style="max-height: 38px; object-fit: contain; filter: brightness(0);">
+</a>
+
+</body>
+</html>
