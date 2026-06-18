@@ -299,6 +299,34 @@
             box-shadow: 0 0 6px var(--accent-glow);
         }
 
+        /* ─── ANIMATIONS & MARQUEE ─── */
+        @keyframes rotateCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes rotateCCW { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+        @keyframes pulseLock { 0% { transform: scale(0.96); opacity: 0.8; } 100% { transform: scale(1.04); opacity: 1; } }
+        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .marquee-container {
+            overflow: hidden; white-space: nowrap; width: 100%; position: relative;
+            padding: 12px 0; background: rgba(0, 0, 0, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.04); border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            margin: 10px 0 20px; display: block; box-sizing: border-box;
+        }
+        .marquee-content {
+            display: inline-flex; animation: scrollMarquee 35s linear infinite;
+            will-change: transform; align-items: center; min-width: max-content; flex-shrink: 0;
+        }
+        .marquee-item {
+            padding: 0 24px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .marquee-item img {
+            height: 35px !important; width: auto !important; display: inline-block !important;
+            vertical-align: middle; filter: brightness(0) invert(1); opacity: 0.4;
+            transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+        }
+        .marquee-item img:hover {
+            filter: brightness(0) invert(1); opacity: 0.85; transform: scale(1.05);
+        }
+
         /* ═══════════════════════════════
            PIN GATE
            ═══════════════════════════════ */
@@ -413,12 +441,26 @@
 
     <div class="vault">
         <!-- ═══ LOGO HERO ═══ -->
-        <div class="logo-hero" id="seal-trigger">
-            <div class="logo-ring">
-                <img src="assets/treze_icon.jpg" alt="Treze Labs" class="logo-icon"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML += '<svg class=\'logo-icon\' viewBox=\'0 0 100 100\' style=\'width:50px;height:50px\'><circle cx=\'50\' cy=\'50\' r=\'48\' fill=\'#0a0a0d\' stroke=\'#3B82F6\' stroke-width=\'1.5\'/><text x=\'50\' y=\'58\' text-anchor=\'middle\' fill=\'#3B82F6\' font-family=\'Outfit\' font-size=\'32\' font-weight=\'700\'>T</text></svg>';">
+        <div class="logo-hero" id="seal-trigger" style="margin-bottom: 2.5rem; cursor: pointer; user-select: none;">
+            <div style="margin-bottom: 24px; text-align: center;">
+                <img src="treze_footer.png" style="height: 32px; filter: brightness(0) invert(1); opacity: 0.95; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='1';" onmouseout="this.style.transform='scale(1)'; this.style.opacity='0.95';" alt="Treze Labs Logo">
+                <span style="display: block; font-size: 0.55rem; letter-spacing: 3.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 600; margin-top: 6px; font-family: var(--font-display);">Sistemas Digitales · Serverless First</span>
             </div>
-            <span class="logo-wordmark">Treze Labs</span>
+
+            <!-- Interactive Concentric Crypto-Dial -->
+            <div style="position: relative; margin: 0 auto; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                <div style="position: absolute; inset: 0; border: 2px dashed rgba(59, 130, 246, 0.35); border-radius: 50%; animation: rotateCW 30s linear infinite;"></div>
+                <div style="position: absolute; inset: 8px; border: 1.5px solid rgba(59, 130, 246, 0.15); border-radius: 50%; border-top-color: #3b82f6; border-bottom-color: #3b82f6; animation: rotateCCW 15s linear infinite;"></div>
+                <div style="position: absolute; inset: 16px; border: 1px dashed rgba(96, 165, 250, 0.2); border-radius: 50%; animation: rotateCW 10s linear infinite;"></div>
+                
+                <div style="position: relative; z-index: 1; width: 64px; height: 64px; background: #040814; border: 1px solid rgba(59, 130, 246, 0.4); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #3b82f6; box-shadow: inset 0 0 15px rgba(59,130,246,0.3);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="animation: pulseLock 2s infinite alternate;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span style="font-size: 0.45rem; letter-spacing: 1px; text-transform: uppercase; color: #60a5fa; margin-top: 4px; font-weight: 700; font-family: var(--font-body);">Secured</span>
+                </div>
+            </div>
         </div>
 
         <div class="divider"></div>
@@ -444,6 +486,40 @@
             <div class="stat">
                 <span class="stat-val">100%</span>
                 <span class="stat-lbl">Entregados</span>
+            </div>
+        </div>
+
+        <!-- Carrusel Infinito de Proyectos (Marcas) -->
+        <div style="font-family: var(--font-display); font-size: 0.58rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255, 255, 255, 0.35); text-align: center; margin-top: 10px; margin-bottom: 2px;">Algunas marcas con las que trabajamos...</div>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="marquee-item"><img src="assets/marcas/TBA.png" alt="TBA"></span>
+                <span class="marquee-item"><img src="assets/marcas/spa_claro_de_luna.png" alt="Claro de Luna"></span>
+                <span class="marquee-item"><img src="assets/marcas/fiore_de_enero.png" alt="Fiore de Enero"></span>
+                <span class="marquee-item"><img src="assets/marcas/valti_moments.png" alt="Valti Moments"></span>
+                <span class="marquee-item"><img src="assets/marcas/zayara.png" alt="Zayara"></span>
+                <span class="marquee-item"><img src="assets/marcas/momentum.png" alt="Momentum"></span>
+                <span class="marquee-item"><img src="assets/marcas/corazon_bohemio.png" alt="Corazón Bohemio"></span>
+                <span class="marquee-item"><img src="assets/marcas/Indra.png" alt="Indra"></span>
+                <span class="marquee-item"><img src="assets/marcas/Mariel_palaceta.png" alt="Mariel Palaceta"></span>
+                <span class="marquee-item"><img src="assets/marcas/Ale-beauty.png" alt="Ale Beauty"></span>
+                <span class="marquee-item"><img src="assets/marcas/Dulceria_el_globo.png" alt="Dulcería El Globo"></span>
+                <span class="marquee-item"><img src="assets/marcas/Hiperbarica_del_puerto.png" alt="Hiperbárica del Puerto"></span>
+                <span class="marquee-item"><img src="assets/marcas/Opti_lab.png" alt="Opti Lab"></span>
+                <!-- Duplicated for seamless loop -->
+                <span class="marquee-item"><img src="assets/marcas/TBA.png" alt="TBA"></span>
+                <span class="marquee-item"><img src="assets/marcas/spa_claro_de_luna.png" alt="Claro de Luna"></span>
+                <span class="marquee-item"><img src="assets/marcas/fiore_de_enero.png" alt="Fiore de Enero"></span>
+                <span class="marquee-item"><img src="assets/marcas/valti_moments.png" alt="Valti Moments"></span>
+                <span class="marquee-item"><img src="assets/marcas/zayara.png" alt="Zayara"></span>
+                <span class="marquee-item"><img src="assets/marcas/momentum.png" alt="Momentum"></span>
+                <span class="marquee-item"><img src="assets/marcas/corazon_bohemio.png" alt="Corazón Bohemio"></span>
+                <span class="marquee-item"><img src="assets/marcas/Indra.png" alt="Indra"></span>
+                <span class="marquee-item"><img src="assets/marcas/Mariel_palaceta.png" alt="Mariel Palaceta"></span>
+                <span class="marquee-item"><img src="assets/marcas/Ale-beauty.png" alt="Ale Beauty"></span>
+                <span class="marquee-item"><img src="assets/marcas/Dulceria_el_globo.png" alt="Dulcería El Globo"></span>
+                <span class="marquee-item"><img src="assets/marcas/Hiperbarica_del_puerto.png" alt="Hiperbárica del Puerto"></span>
+                <span class="marquee-item"><img src="assets/marcas/Opti_lab.png" alt="Opti Lab"></span>
             </div>
         </div>
 
