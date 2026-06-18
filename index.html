@@ -2,637 +2,569 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Valti Moments Premium ✨ | Experiencias Gourmet</title>
-    
-    <!-- Open Graph / WhatsApp Preview Fix -->
-    <meta property="og:title" content="Valti Moments | Experiencias Gourmet ✨">
-    <meta property="og:description" content="Creamos experiencias con estilo para los momentos que más importan. Snack Bar, Chilaquiles y Hot Dogs premium en Veracruz.">
-    <meta property="og:image" content="https://vcard-valti-moments.vercel.app/assets/og-card.jpg?v=2">
-    <meta property="og:image:secure_url" content="https://vcard-valti-moments.vercel.app/assets/og-card.jpg?v=2">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="800">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vcard-valti-moments.vercel.app/">
-    
-    <!-- Icons -->
-    <link rel="icon" type="image/jpeg" href="assets/og-card.jpg">
-    <link rel="apple-touch-icon" href="assets/og-card.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Propuesta Archivada | Treze Labs</title>
+    <meta name="description" content="Esta propuesta digital ha sido archivada por Treze Labs.">
+    <meta name="robots" content="noindex, nofollow">
 
-    <!-- Premium Fonts & Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Anim Libs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Propuesta Archivada | Treze Labs">
+    <meta property="og:description" content="Esta propuesta digital ha sido archivada. Contacta a Treze Labs para reactivarla.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Outfit (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* ── Treze Labs Electric Blue System ── */
+            --bg:         #030304;
+            --surface:    #060608;
+            --card:       #0a0a0d;
+            --card-h:     #0e0e13;
+            --border:     rgba(255,255,255,0.04);
+            --border-h:   rgba(255,255,255,0.10);
+
+            --accent:     #3B82F6;
+            --accent-l:   #60A5FA;
+            --accent-d:   #2563EB;
+            --accent-sub: rgba(59,130,246,0.08);
+            --accent-glow:rgba(59,130,246,0.25);
+
+            --text:       #EDEDED;
+            --text-2:     #8A8A92;
+            --text-3:     #44444A;
+
+            --danger:     #EF4444;
+            --success:    #22C55E;
+
+            --font-display: 'Outfit', sans-serif;
+            --font-body:    'Inter', -apple-system, sans-serif;
+            --font-mono:    'JetBrains Mono', monospace;
+
+            --radius:     28px;
+            --radius-s:   18px;
+            --radius-xs:  12px;
+
+            --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+            --spring:     cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        html, body {
+            height: 100%;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ─── FILM GRAIN ─── */
+        .grain {
+            position: fixed; inset: 0; z-index: 1; opacity: 0.03; pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 128px 128px;
+            animation: grainDrift 8s steps(10) infinite;
+        }
+        @keyframes grainDrift {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -10%); }
+            30% { transform: translate(7%, -25%); }
+            50% { transform: translate(-15%, 10%); }
+            70% { transform: translate(0, 15%); }
+            90% { transform: translate(-10%, 10%); }
+        }
+
+        /* ─── AMBIENT GLOW ─── */
+        .ambient {
+            position: fixed;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: ambientPulse 6s ease-in-out infinite;
+        }
+        @keyframes ambientPulse {
+            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+        }
+
+        /* ─── GRID PATTERN (subtle) ─── */
+        .grid-pattern {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.025;
+            background-image: 
+                linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* ─── MAIN VAULT ─── */
+        .vault {
+            position: relative; z-index: 2;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            height: 100vh; padding: 2rem; text-align: center;
+            opacity: 0;
+            animation: fadeUp 1s var(--ease-out) 0.15s forwards;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ═══ LOGO HERO ═══ */
+        .logo-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .logo-ring {
+            position: relative;
+            width: 94px; height: 94px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
+        }
+        .logo-ring::before {
+            content: '';
+            position: absolute; inset: 0;
+            border-radius: 50%;
+            border: 1.5px solid rgba(59,130,246,0.25);
+        }
+        .logo-ring::after {
+            content: '';
+            position: absolute; inset: -5px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(59,130,246,0.12);
+            animation: ledPulse 2.5s ease-in-out infinite;
+        }
+        @keyframes ledPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(59,130,246,0.2), inset 0 0 15px rgba(59,130,246,0.05);
+                opacity: 1; transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 30px 10px rgba(59,130,246,0.1), inset 0 0 20px rgba(59,130,246,0.08);
+                opacity: 0.65; transform: scale(1.08);
+            }
+        }
+
+        .logo-icon {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            filter: brightness(1.1);
+            position: relative; z-index: 1;
+        }
+
+        .logo-hero:active .logo-ring { transform: scale(0.92); transition: transform 0.1s; }
+        .logo-hero.tap-hint .logo-ring::before {
+            border-color: rgba(59,130,246,0.5);
+            transition: border-color 0.2s;
+        }
+
+        .logo-wordmark {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text);
+            opacity: 0.75;
+        }
+
+        /* ─── DIVIDER ─── */
+        .divider {
+            width: 40px; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent);
+            margin-bottom: 2rem;
+        }
+
+        /* ─── BADGE ─── */
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px; border-radius: 100px;
+            background: rgba(239,68,68,0.06);
+            border: 1px solid rgba(239,68,68,0.12);
+            color: var(--danger);
+            font-family: var(--font-mono);
+            font-size: 0.6rem; font-weight: 500;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            margin-bottom: 1.4rem;
+        }
+        .badge::before {
+            content: ''; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--danger);
+            animation: blink 2s ease-in-out infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.1; } }
+
+        /* ─── TYPOGRAPHY ─── */
+        .vault h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent-l) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .vault .desc {
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            color: var(--text-2);
+            font-weight: 300;
+            line-height: 1.75;
+            max-width: 360px;
+            margin-bottom: 2.2rem;
+        }
+        .vault .desc strong {
+            color: var(--accent-l);
+            font-weight: 500;
+        }
+
+        /* ─── STATS ─── */
+        .stats {
+            display: flex; gap: 2rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-s);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            margin-bottom: 2.2rem;
+            backdrop-filter: blur(10px);
+        }
+        .stat { text-align: center; }
+        .stat-val {
+            font-family: var(--font-display);
+            font-size: 1.4rem; font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--accent), var(--accent-l));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+        .stat-lbl {
+            font-family: var(--font-mono);
+            font-size: 0.55rem; color: var(--text-3);
+            text-transform: uppercase; letter-spacing: 0.12em; margin-top: 3px;
+        }
+
+        /* ─── CTA ─── */
+        .cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 32px; border-radius: var(--radius-xs);
+            background: var(--text);
+            color: var(--bg); font-size: 0.82rem; font-weight: 600;
+            letter-spacing: 0.01em; text-decoration: none;
+            transition: all 0.3s ease; border: none; cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(255,255,255,0.12);
+            opacity: 0.95;
+        }
+        .cta svg { width: 17px; height: 17px; fill: currentColor; }
+
+        /* ─── FOOTER ─── */
+        .vault-footer {
+            position: absolute; bottom: 1.5rem;
+            display: flex; align-items: center; gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.52rem; color: var(--text-3);
+            letter-spacing: 0.12em; text-transform: uppercase;
+        }
+        .vault-footer .dot {
+            width: 4px; height: 4px; border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 6px var(--accent-glow);
+        }
+
+        /* ═══════════════════════════════
+           PIN GATE
+           ═══════════════════════════════ */
+        .pin-overlay {
+            position: fixed; inset: 0; z-index: 100;
+            background: rgba(3,3,4,0.94);
+            backdrop-filter: blur(30px);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s;
+        }
+        .pin-overlay.active { opacity: 1; visibility: visible; }
+
+        .pin-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.4rem 2rem;
+            width: 320px; max-width: 90vw;
+            text-align: center;
+            transform: scale(0.92) translateY(16px);
+            transition: transform 0.45s var(--spring);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+        }
+        .pin-overlay.active .pin-card { transform: scale(1) translateY(0); }
+
+        .pin-card .pin-icon {
+            width: 48px; height: 48px;
+            margin: 0 auto 16px;
+            color: var(--accent);
+            opacity: 0.8;
+        }
+        .pin-card h3 {
+            font-family: var(--font-display);
+            font-size: 1rem; font-weight: 600;
+            margin-bottom: 0.35rem; color: var(--text); letter-spacing: -0.01em;
+        }
+        .pin-card p {
+            font-size: 0.68rem; color: var(--text-2);
+            margin-bottom: 1.5rem; font-weight: 300;
+        }
+
+        .pin-dots { display: flex; justify-content: center; gap: 16px; margin-bottom: 1.5rem; }
+        .pin-dot {
+            width: 12px; height: 12px; border-radius: 50%;
+            border: 1.5px solid var(--text-3); background: transparent;
+            transition: all 0.25s var(--spring);
+        }
+        .pin-dot.filled {
+            background: var(--accent); border-color: var(--accent);
+            box-shadow: 0 0 12px var(--accent-glow); transform: scale(1.2);
+        }
+        .pin-dot.error {
+            border-color: var(--danger); background: var(--danger);
+            box-shadow: 0 0 12px rgba(239,68,68,0.3);
+            animation: shake 0.4s ease;
+        }
+        .pin-dot.success {
+            border-color: var(--success); background: var(--success);
+            box-shadow: 0 0 12px rgba(34,197,94,0.3);
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+
+        .pin-keypad {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 8px; max-width: 224px; margin: 0 auto;
+        }
+        .pin-key {
+            height: 52px; border-radius: var(--radius-xs);
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.015);
+            color: var(--text); font-family: var(--font-body);
+            font-size: 1.1rem; font-weight: 500;
+            cursor: pointer; transition: all 0.12s ease;
+            display: flex; align-items: center; justify-content: center;
+            user-select: none;
+        }
+        .pin-key:active {
+            background: var(--accent-sub);
+            border-color: rgba(59,130,246,0.25);
+            transform: scale(0.92);
+        }
+        .pin-key--back { font-size: 1rem; color: var(--text-2); }
+        .pin-key--empty { visibility: hidden; }
+        .pin-close {
+            position: absolute; top: 1rem; right: 1.2rem;
+            background: none; border: none; color: var(--text-3);
+            font-size: 1.3rem; cursor: pointer; padding: 8px; line-height: 1;
+            transition: color 0.2s;
+        }
+        .pin-close:hover { color: var(--text-2); }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 480px) {
+            .stats { gap: 1.2rem; padding: 0.85rem 1.2rem; }
+            .stat-val { font-size: 1.15rem; }
+            .vault { padding: 1.5rem; }
+            .logo-ring { width: 82px; height: 82px; }
+            .logo-icon { width: 44px; height: 44px; }
+            .cta { padding: 13px 26px; font-size: 0.78rem; }
+        }
+    </style>
 </head>
 <body>
+    <div class="grid-pattern"></div>
+    <div class="ambient"></div>
+    <div class="grain"></div>
 
+    <div class="vault">
+        <!-- ═══ LOGO HERO ═══ -->
+        <div class="logo-hero" id="seal-trigger">
+            <div class="logo-ring">
+                <img src="assets/treze_icon.jpg" alt="Treze Labs" class="logo-icon"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML += '<svg class=\'logo-icon\' viewBox=\'0 0 100 100\' style=\'width:50px;height:50px\'><circle cx=\'50\' cy=\'50\' r=\'48\' fill=\'#0a0a0d\' stroke=\'#3B82F6\' stroke-width=\'1.5\'/><text x=\'50\' y=\'58\' text-anchor=\'middle\' fill=\'#3B82F6\' font-family=\'Outfit\' font-size=\'32\' font-weight=\'700\'>T</text></svg>';">
+            </div>
+            <span class="logo-wordmark">Treze Labs</span>
+        </div>
 
+        <div class="divider"></div>
 
-    <!-- SPLASH SCREEN -->
-    <div class="intro-splash" id="intro">
+        <div class="badge">Propuesta Archivada</div>
 
-        <!-- TREZE LABS CO-BRANDING SPLASH -->
-        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; animation: fadeInTreze 1.5s ease 0.5s forwards; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; z-index: 9999999;">
-            <p style="color: #64748b; font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 2px; text-transform: uppercase; margin: 0;">Powered by</p>
-            <img src="treze_footer.png" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.9;" alt="Treze Labs">
-            <style>@keyframes fadeInTreze { to { opacity: 1; } }</style>
+        <h1>Esta experiencia fue<br>diseñada para ti</h1>
+
+        <p class="desc">
+            La propuesta digital que preparamos <strong>ha expirado</strong>. 
+            Tu proyecto sigue reservado en nuestra bóveda por tiempo limitado.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-val" id="counter-projects">0</span>
+                <span class="stat-lbl">Proyectos</span>
+            </div>
+            <div class="stat">
+                <span class="stat-val" id="counter-clients">0</span>
+                <span class="stat-lbl">Clientes</span>
+            </div>
+            <div class="stat">
+                <span class="stat-val">100%</span>
+                <span class="stat-lbl">Entregados</span>
+            </div>
+        </div>
+
+        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20vi%20que%20mi%20propuesta%20expir%C3%B3.%20Me%20gustar%C3%ADa%20reactivarla." class="cta" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            ¿Cambiaste de opinión?
         </a>
 
-        <div class="splash-unit" id="splash-logo">
-            <img src="assets/LOGO OFICIAL.jpg" alt="Logo Circular Valti">
-        </div>
+        <span class="vault-footer"><span class="dot"></span> Treze Labs · Ingeniería Digital</span>
     </div>
 
-    <!-- DIGITAL MENU OVERLAY -->
-    <div class="menu-overlay" id="menu-view">
-        <i class="ri-close-line menu-close" onclick="closeMenu()"></i>
-        <h2 class="section-title-small">Catálogo Completo 📋</h2>
-        <p class="section-subtitle">Edición 2025-2026</p>
-        
-        <div class="menu-scroll">
-            <!-- SNACKS SALADOS -->
-            <div class="menu-category">
-                <h3><i class="ri-fire-line"></i> Barra de Snacks Salados</h3>
-                <p class="menu-cat-desc">A elegir 3 de cada categoría · Servicio refill 2 hrs</p>
-                <div class="menu-items-grid">
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🥔 Papas</span>
-                        <span class="menu-group-items">Saladas · Ruffles de queso · Doritos nacho · Flamming hot · Chicharrones · Palomitas · Platanitos fritos · Churritos</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🥕 Frutas y verduras</span>
-                        <span class="menu-group-items">Zanahoria · Jícama · Pepino · Piña · Sandía</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🍬 Gomitas</span>
-                        <span class="menu-group-items">Manguitos · Picafresas · Gusanitos · Panditas · Pingüinos</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🥜 Cacahuates</span>
-                        <span class="menu-group-items">Japoneses · Enchilados · Mezcla salada · Español · Chilito</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🍭 Dulces</span>
-                        <span class="menu-group-items">Pelón pelo rico · Paleta de corazón · Tamborsito · Banderillas de tamarindo · Pulparindo</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🌶️ Chilitos</span>
-                        <span class="menu-group-items">Chamoy · Valentina · Tajín · Botanera · Miguelito</span>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <div class="price-tag">50 PAX<br><strong>$3,500</strong><span>6oz</span></div>
-                    <div class="price-tag">100 PAX<br><strong>$5,150</strong><span>6oz</span></div>
-                    <div class="price-tag">150 PAX<br><strong>$6,800</strong><span>6oz</span></div>
-                    <div class="price-tag">200 PAX<br><strong>$8,450</strong><span>6oz</span></div>
-                </div>
+    <!-- ═══ PIN GATE ═══ -->
+    <div class="pin-overlay" id="pin-overlay">
+        <button class="pin-close" id="pin-close">&times;</button>
+        <div class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                <circle cx="12" cy="16" r="1"/>
+            </svg>
+            <h3>Acceso Propietario</h3>
+            <p>Ingresa tu PIN para desbloquear</p>
+            <div class="pin-dots">
+                <div class="pin-dot" data-idx="0"></div>
+                <div class="pin-dot" data-idx="1"></div>
+                <div class="pin-dot" data-idx="2"></div>
+                <div class="pin-dot" data-idx="3"></div>
             </div>
-
-            <!-- SNACKS DULCES -->
-            <div class="menu-category">
-                <h3><i class="ri-cake-2-line"></i> Barra de Snacks Dulces</h3>
-                <p class="menu-cat-desc">A elegir 3 de cada categoría · Servicio refill 2 hrs</p>
-                <div class="menu-items-grid">
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🍓 Frutas</span>
-                        <span class="menu-group-items">Uvas · Fresas · Manzana · Plátano · Kiwi · Piña · Sandía</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🍩 Postres</span>
-                        <span class="menu-group-items">Trozos de brownie · Mini pretzels · Mini donas · Bombones de chocolate · Bombones · Oreo · Lunetas</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🍯 Jarabes</span>
-                        <span class="menu-group-items">Miel · Hershey's líquido · Lechera · Nutella</span>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <div class="price-tag">50 PAX<br><strong>$3,250</strong><span>6oz</span></div>
-                    <div class="price-tag">100 PAX<br><strong>$4,350</strong><span>6oz</span></div>
-                    <div class="price-tag">150 PAX<br><strong>$5,450</strong><span>6oz</span></div>
-                    <div class="price-tag">200 PAX<br><strong>$6,550</strong><span>6oz</span></div>
-                </div>
-            </div>
-
-            <!-- HOT CAKES -->
-            <div class="menu-category">
-                <h3><i class="ri-blaze-line"></i> Hot Cakes Bar + Toppings</h3>
-                <div class="menu-price-row">
-                    <div class="price-tag">50 pzas<br><strong>$4,150</strong></div>
-                    <div class="price-tag">100 pzas<br><strong>$5,400</strong></div>
-                    <div class="price-tag">150 pzas<br><strong>$6,650</strong></div>
-                    <div class="price-tag">200 pzas<br><strong>$7,900</strong></div>
-                </div>
-            </div>
-
-            <!-- HOT DOGS -->
-            <div class="menu-category">
-                <h3><i class="ri-bread-line"></i> Barra de Hot Dogs</h3>
-                <p class="menu-cat-desc">Base: Salchichas y medias noches</p>
-                <div class="menu-items-grid">
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">🌭 Paquete Clásico</span>
-                        <span class="menu-group-items">Tomate · Cebolla · Rajas · Papas trituradas (Doritos o Ruffles) · Catsup · Mayonesa · Mostaza · Mayonesa de sabor a elegir</span>
-                    </div>
-                    <div class="menu-item-group">
-                        <span class="menu-group-label">⭐ Paquete Premium</span>
-                        <span class="menu-group-items">Todo lo clásico + Piña · Tocino · Chorizo · Queso amarillo · Mayonesa guacamole · Mayonesa chipotle · Mayonesa habanero</span>
-                    </div>
-                </div>
-                <div class="menu-price-row">
-                    <div class="price-tag">50 pzas<br><strong>$2,850</strong><span>Clásico</span></div>
-                    <div class="price-tag">50 pzas<br><strong>$3,450</strong><span>Premium</span></div>
-                    <div class="price-tag">100 pzas<br><strong>$4,250</strong><span>Clásico</span></div>
-                    <div class="price-tag">100 pzas<br><strong>$5,050</strong><span>Premium</span></div>
-                </div>
+            <div class="pin-keypad">
+                <button class="pin-key" data-num="1">1</button>
+                <button class="pin-key" data-num="2">2</button>
+                <button class="pin-key" data-num="3">3</button>
+                <button class="pin-key" data-num="4">4</button>
+                <button class="pin-key" data-num="5">5</button>
+                <button class="pin-key" data-num="6">6</button>
+                <button class="pin-key" data-num="7">7</button>
+                <button class="pin-key" data-num="8">8</button>
+                <button class="pin-key" data-num="9">9</button>
+                <button class="pin-key pin-key--empty"></button>
+                <button class="pin-key" data-num="0">0</button>
+                <button class="pin-key pin-key--back" id="pin-back">⌫</button>
             </div>
         </div>
     </div>
 
-    <!-- MAIN APP -->
-    <main class="app-frame" id="app">
+    <script>
+        const SECRET_PIN = '1313';
+        const ORIGINAL_PAGE = 'index.original.html';
 
+        /* ── Counter Animation ── */
+        function animateCounter(el, target, suffix) {
+            let c = 0;
+            const inc = target / 50;
+            const t = setInterval(() => {
+                c += inc;
+                if (c >= target) { c = target; clearInterval(t); }
+                el.textContent = Math.floor(c) + (suffix || '+');
+            }, 35);
+        }
+        setTimeout(() => {
+            animateCounter(document.getElementById('counter-projects'), 47, '+');
+            animateCounter(document.getElementById('counter-clients'), 33, '+');
+        }, 600);
 
-        
-        <!-- HERO SECTION -->
-        <header class="hero-section reveal">
-            <div class="hero-bg">
-                <img src="assets/Valti-nocturno.jpg" alt="Evento Valti" class="hero-bg-img">
-                <div class="hero-overlay"></div>
-            </div>
+        /* ── PIN Gate Logic ── */
+        const seal = document.getElementById('seal-trigger');
+        const overlay = document.getElementById('pin-overlay');
+        const closeBtn = document.getElementById('pin-close');
+        const dots = document.querySelectorAll('.pin-dot');
+        const keys = document.querySelectorAll('.pin-key[data-num]');
+        const backKey = document.getElementById('pin-back');
+        let tapCount = 0, tapTimer = null, pinInput = '';
 
-            <div class="hero-content">
-                <div class="brand-prof-unit" data-tilt>
-                    <img src="assets/LOGO OFICIAL.jpg" alt="Perfil Valti">
-                </div>
-                
-                <h1 class="brand-name">Valti Moments</h1>
-                <p class="brand-tagline">Experiencias gastronómicas para eventos boutique</p>
+        seal.addEventListener('click', () => {
+            tapCount++;
+            seal.classList.add('tap-hint');
+            setTimeout(() => seal.classList.remove('tap-hint'), 250);
+            clearTimeout(tapTimer);
+            tapTimer = setTimeout(() => { tapCount = 0; }, 900);
+            if (tapCount >= 3) { tapCount = 0; openPin(); }
+        });
 
-                <!-- Trust Badges -->
-                <div class="trust-badges">
-                    <div class="badge"><i class="ri-map-pin-2-fill"></i> Veracruz</div>
-                    <div class="badge"><i class="ri-star-fill"></i> +50 eventos</div>
-                    <div class="badge"><i class="ri-time-fill"></i> Servicio 2 hrs</div>
-                </div>
+        function openPin() { pinInput = ''; updateDots(); overlay.classList.add('active'); }
+        function closePin() { overlay.classList.remove('active'); pinInput = ''; updateDots(); }
 
-                <div class="action-grid">
-                    <a href="https://www.instagram.com/valtimoments/" target="_blank" class="action-pill"><i class="ri-instagram-line"></i></a>
-                    <a href="https://wa.me/522292451954" target="_blank" class="action-pill wa-pill"><i class="ri-whatsapp-line"></i></a>
-                    <a href="#" onclick="openMenu(); return false;" class="action-pill"><i class="ri-restaurant-line"></i></a>
-                    <a href="https://maps.app.goo.gl/veracruz" target="_blank" class="action-pill"><i class="ri-map-pin-line"></i></a>
-                </div>
-            </div>
-        </header>
+        closeBtn.addEventListener('click', closePin);
+        overlay.addEventListener('click', e => { if (e.target === overlay) closePin(); });
 
-        <!-- SECONDARY CTA -->
-        <div class="secondary-cta reveal">
-            <button class="btn-secondary" onclick="openMenu()">
-                <i class="ri-menu-search-line"></i> Ver Catálogo Completo
-            </button>
-        </div>
+        keys.forEach(k => k.addEventListener('click', () => {
+            if (pinInput.length >= 4) return;
+            pinInput += k.dataset.num; updateDots();
+            if (pinInput.length === 4) setTimeout(validate, 300);
+        }));
+        backKey.addEventListener('click', () => { pinInput = pinInput.slice(0, -1); updateDots(); });
 
-        <!-- CATALOGUE SECTION -->
-        <section class="reveal catalogue-section" style="position: relative; overflow: hidden; padding-top: 20px;">
+        document.addEventListener('keydown', e => {
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') return closePin();
+            if (e.key === 'Backspace') { pinInput = pinInput.slice(0, -1); updateDots(); return; }
+            if (/^\d$/.test(e.key) && pinInput.length < 4) {
+                pinInput += e.key; updateDots();
+                if (pinInput.length === 4) setTimeout(validate, 300);
+            }
+        });
 
+        function updateDots() {
+            dots.forEach((d, i) => {
+                d.classList.remove('filled', 'error', 'success');
+                if (i < pinInput.length) d.classList.add('filled');
+            });
+        }
 
-            <span class="section-label" style="position: relative; z-index: 2;">Nuestras Estaciones</span>
-            <div class="boho-card">
-                <div class="card-top"><img src="assets/valti-Snacks.jpg" alt="Snack Bar" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
-                <div class="card-desc">
-                    <h3>Barra de Snacks</h3>
-                    <p>Dulces y salados con refill 2 hrs. Gomitas, cacahuates, frutas, chilitos y más.</p>
-                    <span class="card-price" onclick="openForm()">Desde $3,250</span>
-                </div>
-            </div>
-
-            <div class="boho-card">
-                <div class="card-top"><img src="assets/Valti-hotdog.jpg" alt="Hot Dog Station" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
-                <div class="card-desc">
-                    <h3>Barra de Hot Dogs</h3>
-                    <p>Clásico o Premium. Toppings completos, aderezos especiales y tocino crujiente.</p>
-                    <span class="card-price" onclick="openForm()">Desde $2,850</span>
-                </div>
-            </div>
-
-            <div class="boho-card">
-                <div class="card-top"><img src="assets/Valti-hotcakes.jpg" alt="Hot Cakes Bar" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
-                <div class="card-desc">
-                    <h3>Hot Cakes Bar</h3>
-                    <p>Estacion interactiva con toppings premium: Nutella, frutas, bombones y jarabes.</p>
-                    <span class="card-price" onclick="openForm()">Desde $4,150</span>
-                </div>
-            </div>
-
-            <div class="boho-card hidden" id="catalogo-hmb" style="display:none;">
-                <div class="card-top"><img src="assets/Valti-hamburguesas.jpg" alt="Barra de Hamburguesas" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
-                <div class="card-desc">
-                    <h3>Barra de Hamburguesas</h3>
-                    <p>Pan, pollo empanizado, tomate, cebolla, lechuga, aderezos y papas a elegir.</p>
-                    <span class="card-price" onclick="openForm()">Cotizar paquete</span>
-                </div>
-            </div>
-
-            <div class="boho-card hidden" id="catalogo-chil" style="display:none;">
-                <div class="card-top"><img src="assets/Valti-chilaquiles.jpg" alt="Barra de Chilaquiles" onclick="openLightbox(this.src)" style="cursor: zoom-in;"></div>
-                <div class="card-desc">
-                    <h3>Barra de Chilaquiles</h3>
-                    <p>Salsa a elegir (verde/roja), proteína (pollo, huevo, carne), queso, crema y cebolla.</p>
-                    <span class="card-price" onclick="openForm()">Cotizar paquete</span>
-                </div>
-            </div>
-
-        </section>
-
-        <div style="height: 120px;"></div>
-
-    </main>
-
-    <!-- ============================================ -->
-    <!-- MULTI-STEP FORM OVERLAY (COTIZADOR REAL)     -->
-    <!-- ============================================ -->
-    <div class="form-overlay" id="form-view">
-        <div class="form-header">
-            <i class="ri-close-line" style="font-size: 1.5rem; cursor: pointer;" onclick="closeForm()"></i>
-            <div class="progress-bar-wrap">
-                <div class="progress-bar-fill" id="form-progress"></div>
-            </div>
-            <span id="step-counter" style="font-size: 0.8rem; font-weight: 600; color: var(--primary);">1 / 8</span>
-        </div>
-
-        <div class="step-container">
-
-            <!-- ========== STEP 1: SERVICIOS ========== -->
-            <div class="step active" id="step-1">
-                <h2 class="step-title">¿Qué experiencia quieres?</h2>
-                <p class="step-desc">Elige la barra principal para tu evento.</p>
-                <div class="form-options">
-                    <div class="option-card" data-val="Snacks Salados" onclick="toggleService(this)">
-                        <i class="ri-fire-line"></i>
-                        <div>
-                            <strong>Barra de Snacks Salados</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Papas, gomitas, cacahuates, dulces y chilitos</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card" data-val="Snacks Dulces" onclick="toggleService(this)">
-                        <i class="ri-cake-2-line"></i>
-                        <div>
-                            <strong>Barra de Snacks Dulces</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Frutas, postres, bombones y jarabes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card" data-val="Hot Cakes Bar" onclick="toggleService(this)">
-                        <i class="ri-blaze-line"></i>
-                        <div>
-                            <strong>Hot Cakes Bar + Toppings</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Estación interactiva con toppings premium</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card" data-val="Hot Dogs" onclick="toggleService(this)">
-                        <i class="ri-bread-line"></i>
-                        <div>
-                            <strong>Barra de Hot Dogs</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Paquete Clásico o Premium</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card hidden" id="opt-hmb" data-val="Hamburguesas" style="display:none;" onclick="toggleService(this)">
-                        <i class="ri-restaurant-line"></i>
-                        <div>
-                            <strong>Barra de Hamburguesas</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Hamburguesa de pollo empanizado + papas</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card hidden" id="opt-chil" data-val="Chilaquiles" style="display:none;" onclick="toggleService(this)">
-                        <i class="ri-bowl-line"></i>
-                        <div>
-                            <strong>Barra de Chilaquiles</strong>
-                            <div class="sub-options">
-                                <span class="sub-option">Salsa y proteína a elegir + complementos</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 1b: SNACKS SALADOS DETALLE ========== -->
-            <div class="step" id="step-1b">
-                <h2 class="step-title" style="font-size: 1.2rem;">🔥 Arma tu Barra Salada</h2>
-                <p class="step-desc" style="font-size: 0.8rem;">Elige hasta 3 productos de cada categoría.</p>
-                
-                <div class="sub-step-scroll">
-                    <div class="cat-group">
-                        <p class="cat-group-title">🥔 Papas <span class="cat-counter" id="cnt-papas">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Saladas</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Ruffles de queso</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Doritos nacho</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Flamming hot</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Chicharrones</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Palomitas</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Platanitos fritos</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','papas')">Churritos</div>
-                        </div>
-                    </div>
-                    <div class="cat-group">
-                        <p class="cat-group-title">🥕 Frutas y verduras <span class="cat-counter" id="cnt-fv">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Zanahoria</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Jícama</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Pepino</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Piña</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','fv')">Sandía</div>
-                        </div>
-                    </div>
-                    <div class="cat-group">
-                        <p class="cat-group-title">🍬 Gomitas <span class="cat-counter" id="cnt-gomitas">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Manguitos</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Picafresas</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Gusanitos</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Panditas</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','gomitas')">Pingüinos</div>
-                        </div>
-                    </div>
-                    <div class="cat-group">
-                        <p class="cat-group-title">🥜 Cacahuates <span class="cat-counter" id="cnt-cacahuates">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Japoneses</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Enchilados</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Mezcla salada</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Español</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','cacahuates')">Chilito</div>
-                        </div>
-                    </div>
-                    <div class="cat-group">
-                        <p class="cat-group-title">🍭 Dulces <span class="cat-counter" id="cnt-dulces_s">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Pelón pelo rico</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Paleta de corazón</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Tamborsito</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Banderillas de tamarindo</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','dulces_s')">Pulparindo</div>
-                        </div>
-                    </div>
-                    <div class="cat-group">
-                        <p class="cat-group-title">🌶️ Chilitos <span class="cat-counter" id="cnt-chilitos">0/3</span></p>
-                        <div class="topping-chips">
-                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Chamoy</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Valentina</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Tajín</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Botanera</div>
-                            <div class="chip" onclick="toggleCatChip(this,'salado','chilitos')">Miguelito</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ========== STEP 1c: SNACKS DULCES DETALLE (INFORMATIVO) ========== -->
-            <div class="step" id="step-1c">
-                <h2 class="step-title" style="font-size: 1.2rem;">🍓 Tu Barra Dulce Incluye Todo Esto:</h2>
-                <p class="step-desc" style="font-size: 0.85rem; line-height: 1.4;">Esta barra viene completa por defecto. Tus invitados disfrutarán de la variedad completa sin necesidad de que elijas sub-categorías.</p>
-                <div class="form-options">
-                    <div class="option-card selected" style="cursor: default; pointer-events: none;">
-                        <i class="ri-check-double-line" style="color: var(--primary);"></i>
-                        <div>
-                            <strong>Menú Completo de Dulces</strong>
-                            <div class="sub-options" style="margin-top: 5px;">
-                                <span class="sub-option"><b>Frutas (7 opciones):</b> Fresa, mango, uva, plátano, kiwi, manzana.</span>
-                                <span class="sub-option"><b>Postres y Complementos (7 opciones):</b> Bombones, brownies, galletas Oreo y chispas, pretzels, gomitas.</span>
-                                <span class="sub-option"><b>Jarabes (4 opciones):</b> Nutella, lechera, chocolate, cajeta.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 1d: HOT DOGS DETALLE ========== -->
-            <div class="step" id="step-1d">
-                <h2 class="step-title" style="font-size: 1.2rem;">🌭 Elige tu Paquete</h2>
-                <p class="step-desc" style="font-size: 0.8rem;">Base: Salchichas y medias noches.</p>
-                <div class="form-options">
-                    <div class="option-card" data-val="Paquete Clásico" onclick="selectStepOption(this, '1d_estilo')">
-                        <i class="ri-bread-line"></i>
-                        <div>
-                            <strong>Paquete Clásico</strong>
-                            <div class="sub-options">
-                                <span class="sub-option"><b>Toppings:</b> Tomate, cebolla, rajas, papas trituradas (Doritos o Ruffles)</span>
-                                <span class="sub-option"><b>Aderezos:</b> Catsup, mayonesa, mostaza + 1 mayo de sabor a elegir</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-card" data-val="Paquete Premium" onclick="selectStepOption(this, '1d_estilo')">
-                        <i class="ri-star-smile-line"></i>
-                        <div>
-                            <strong>Paquete Premium</strong>
-                            <div class="sub-options">
-                                <span class="sub-option"><b>Todo lo clásico +</b> Piña, tocino picado, chorizo</span>
-                                <span class="sub-option"><b>Aderezos:</b> Mayo guacamole, chipotle, habanero + queso amarillo</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ========== STEP 1e: HAMBURGUESAS ========== -->
-            <div class="step" id="step-1e">
-                <h2 class="step-title" style="font-size: 1.2rem;">🍔 Arma tu Barra de Hamburguesas</h2>
-                <p class="step-desc" style="font-size: 0.8rem;">Incluye: Pan, pollo empanizado, tomate, cebolla, lechuga y aderezos.</p>
-                <div class="cat-group" style="text-align: left; margin-bottom: 20px;">
-                    <p class="cat-group-title">Elige tus papas (selecciona 1)</p>
-                    <div class="form-options">
-                        <div class="option-card" data-val="Papas Saladas" onclick="selectStepOption(this, '1e_papas')">
-                            <strong>Papas Saladas</strong>
-                        </div>
-                        <div class="option-card" data-val="Ruffles" onclick="selectStepOption(this, '1e_papas')">
-                            <strong>Ruffles</strong>
-                        </div>
-                        <div class="option-card" data-val="Doritos" onclick="selectStepOption(this, '1e_papas')">
-                            <strong>Doritos</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 1f: CHILAQUILES ========== -->
-            <div class="step" id="step-1f">
-                <h2 class="step-title" style="font-size: 1.2rem;">🥣 Arma tu Barra de Chilaquiles</h2>
-                <p class="step-desc" style="font-size: 0.8rem;">Incluye queso, crema y cebolla.</p>
-                
-                <div class="cat-group" style="text-align: left; margin-bottom: 15px;">
-                    <p class="cat-group-title">Elige la Salsa (selecciona 1)</p>
-                    <div class="form-grid" style="grid-template-columns: 1fr 1fr; gap: 10px;">
-                        <div class="pill-option" data-val="Salsa Verde" onclick="selectStepOption(this, '1f_salsa')">Verde</div>
-                        <div class="pill-option" data-val="Salsa Roja" onclick="selectStepOption(this, '1f_salsa')">Roja</div>
-                    </div>
-                </div>
-
-                <div class="cat-group" style="text-align: left;">
-                    <p class="cat-group-title">Elige la Proteína (selecciona 1)</p>
-                    <div class="form-options">
-                        <div class="option-card" data-val="Pollo" onclick="selectStepOption(this, '1f_proteina')">
-                            <strong>Pollo</strong>
-                        </div>
-                        <div class="option-card" data-val="Huevo Cocido" onclick="selectStepOption(this, '1f_proteina')">
-                            <strong>Huevo Cocido</strong>
-                        </div>
-                        <div class="option-card" data-val="Carne" onclick="selectStepOption(this, '1f_proteina')">
-                            <strong>Carne</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 2: NÚMERO DE PERSONAS ========== -->
-            <div class="step" id="step-2">
-                <h2 class="step-title">¿Cuántos invitados?</h2>
-                <p class="step-desc">Esto define la cantidad de porciones y el precio.</p>
-                <div class="form-grid">
-                    <div class="pill-option" data-val="50" onclick="selectStepOption(this, 2)">
-                        <span class="pill-number">50</span>
-                        <span class="pill-label">personas</span>
-                    </div>
-                    <div class="pill-option" data-val="100" onclick="selectStepOption(this, 2)">
-                        <span class="pill-number">100</span>
-                        <span class="pill-label">personas</span>
-                    </div>
-                    <div class="pill-option" data-val="150" onclick="selectStepOption(this, 2)">
-                        <span class="pill-number">150</span>
-                        <span class="pill-label">personas</span>
-                    </div>
-                    <div class="pill-option" data-val="200" onclick="selectStepOption(this, 2)">
-                        <span class="pill-number">200</span>
-                        <span class="pill-label">personas</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 2b: TAMAÑO DE VASO (solo si aplica snacks) ========== -->
-            <div class="step" id="step-2b">
-                <h2 class="step-title">Tamaño de vaso</h2>
-                <p class="step-desc">Aplica para las barras de snacks.</p>
-                <div class="form-grid">
-                    <div class="pill-option vaso-opt" data-val="6oz" onclick="selectStepOption(this, '2b')">
-                        <span class="pill-number">6 oz</span>
-                        <span class="pill-label">Estándar</span>
-                    </div>
-                    <div class="pill-option vaso-opt" data-val="12oz" onclick="selectStepOption(this, '2b')">
-                        <span class="pill-number">12 oz</span>
-                        <span class="pill-label">Grande (+$1,000 aprox)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 3: TIPO DE EVENTO ========== -->
-            <div class="step" id="step-3">
-                <h2 class="step-title">Tipo de evento</h2>
-                <div class="form-options">
-                    <div class="pill-option" data-val="Cumpleaños infantil" onclick="selectStepOption(this, 3)">Cumpleaños infantil</div>
-                    <div class="pill-option" data-val="Bautizo / Primera comunión" onclick="selectStepOption(this, 3)">Bautizo / Primera comunión</div>
-                    <div class="pill-option" data-val="Fiesta familiar" onclick="selectStepOption(this, 3)">Fiesta familiar</div>
-                    <div class="pill-option" data-val="Evento corporativo" onclick="selectStepOption(this, 3)">Evento corporativo</div>
-                    <div class="pill-option" data-val="Boda / XV Años" onclick="selectStepOption(this, 3)">Boda / XV Años</div>
-                    <div class="pill-option" data-val="Otro" onclick="selectStepOption(this, 3)">Otro</div>
-                </div>
-            </div>
-
-            <!-- ========== STEP 4: FECHA ========== -->
-            <div class="step" id="step-4">
-                <h2 class="step-title">¿Cuándo es tu evento?</h2>
-                <p class="step-desc">Para revisar disponibilidad.</p>
-                <input type="date" id="event-date" class="form-input" onchange="validateStep(4)">
-            </div>
-
-            <!-- ========== STEP 5: LUGAR ========== -->
-            <div class="step" id="step-5">
-                <h2 class="step-title">¿Dónde será?</h2>
-                <p class="step-desc">Para estimar traslado y logística.</p>
-                <input type="text" id="event-location" class="form-input" placeholder="Ciudad o colonia" oninput="validateStep(5)">
-                <input type="text" id="event-venue" class="form-input" placeholder="Nombre del salón o domicilio" oninput="validateStep(5)">
-            </div>
-
-            <!-- ========== STEP 6: CONTACTO ========== -->
-            <div class="step" id="step-6">
-                <h2 class="step-title">Datos de contacto</h2>
-                <input type="text" id="contact-name" class="form-input" placeholder="Tu nombre" oninput="validateStep(6)">
-                <input type="tel" id="contact-wa" class="form-input" placeholder="Tu WhatsApp (10 dígitos)" oninput="validateStep(6)">
-            </div>
-
-            <!-- ========== STEP 7: RESUMEN + COTIZACIÓN ========== -->
-            <div class="step" id="step-7">
-                <h2 class="step-title">Tu Cotización ✨</h2>
-                <p class="step-desc">Revisa el resumen antes de enviarlo.</p>
-                <div id="quote-summary" class="quote-summary"></div>
-                <div class="quote-total" id="quote-total"></div>
-            </div>
-
-        </div>
-
-        <div class="form-nav">
-            <button class="btn-form btn-prev" id="btn-prev" onclick="changeStep(-1)" style="visibility: hidden;">Anterior</button>
-            <button class="btn-form btn-next" id="btn-next" onclick="changeStep(1)" disabled>Siguiente</button>
-        </div>
-    </div>
-
-    <!-- ============================================ -->
-    <!-- LIGHTBOX OVERLAY                             -->
-    <!-- ============================================ -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Vista previa">
-    </div>
-
-    <!-- FLOATING CTA -->
-    <div class="fixed-cta reveal">
-        <button class="btn-boutique" onclick="openForm()">
-            Cotizar Mi Evento ✨
-        </button>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="js/app.js" charset="UTF-8"></script>
-
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-<!-- TREZE SIGNATURE V4 -->
-<div class="treze-footer-watermark" style="text-align: center; font-size: 14px; color: #888; padding: 60px 20px 120px 20px; font-family: sans-serif; opacity: 1; width: 100%; border-top: 1px solid rgba(136, 136, 136, 0.1);">
-    <p style="margin: 0 0 8px 0; font-weight: 400; font-size: 13px;">&copy; 2026 Reservados todos los derechos.</p>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-        <span style="font-weight: 500; font-size: 13px;">Desarrollado por</span>
-        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; align-items: center; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.8'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
-            <img src="treze_footer.png" alt="Treze Labs" style="height: 32px; object-fit: contain; filter: brightness(0);">
-        </a>
-    </div>
-</div>
-
+        function validate() {
+            if (pinInput === SECRET_PIN) {
+                dots.forEach(d => { d.classList.remove('filled'); d.classList.add('success'); });
+                setTimeout(() => { window.location.href = ORIGINAL_PAGE; }, 500);
+            } else {
+                dots.forEach(d => { d.classList.remove('filled'); d.classList.add('error'); });
+                setTimeout(() => { pinInput = ''; dots.forEach(d => d.classList.remove('error')); }, 500);
+            }
+        }
+    </script>
 </body>
 </html>

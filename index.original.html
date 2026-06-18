@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Mango & Nata Premium ✨ | Menú y Paquetes</title>
+    
+    <!-- Open Graph / WhatsApp Preview Fix -->
+    <meta property="og:title" content="Mango & Nata | Menú y Paquetes ✨">
+    <meta property="og:description" content="Descubre nuestros helados y bebidas gourmet. 100% Fruta Natural. Chamoy casero.">
+    <meta property="og:image" content="https://vcard-valti-moments.vercel.app/assets/og-card.png">
+    <meta property="og:image:secure_url" content="https://vcard-valti-moments.vercel.app/assets/og-card.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vcard-valti-moments.vercel.app/">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- Premium Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Anim Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+
+
+    <!-- SPLASH SCREEN -->
+    <div class="intro-splash" id="intro">
+
+        <!-- TREZE LABS CO-BRANDING SPLASH -->
+        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; animation: fadeInTreze 1.5s ease 0.5s forwards; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; z-index: 9999999;">
+            <p style="color: #64748b; font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 2px; text-transform: uppercase; margin: 0;">Powered by</p>
+            <img src="treze_footer.png" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.9;" alt="Treze Labs">
+            <style>@keyframes fadeInTreze { to { opacity: 1; } }</style>
+        </a>
+
+        <div class="splash-unit" id="splash-logo" style="background: var(--accent); border-radius: 50%; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(255, 91, 189, 0.4);">
+            <span style="color: white; font-family: 'Quicksand', sans-serif; font-size: 5rem; font-weight: 700; line-height: 1; margin-top: -10px;">m</span>
+        </div>
+    </div>
+
+    <!-- DIGITAL MENU OVERLAY -->
+    <div class="menu-overlay" id="menu-view">
+        <i class="ri-close-line menu-close" onclick="closeMenu()"></i>
+        <h2 class="section-title-small" style="color: var(--accent);">Menú Completo 📋</h2>
+        <p class="section-subtitle">Mango & Nata</p>
+        
+        <div class="menu-scroll">
+            <!-- BASE AGUA -->
+            <div class="menu-category" style="border-top: 4px solid var(--accent);">
+                <h3 style="color: var(--accent); font-size: 1.5rem; text-transform: uppercase;">Menú</h3>
+                <h3 style="color: var(--primary); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 15px;">Base Agua</h3>
+                <div class="menu-price-row" style="margin-bottom: 20px;">
+                    <div class="price-tag">120 ml<br><strong style="color: var(--text);">$15</strong></div>
+                    <div class="price-tag">180 ml<br><strong style="color: var(--text);">$20</strong></div>
+                </div>
+                <div class="menu-items-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <span class="menu-group-items">Mango<br>Mango con chamoy<br>Maracuyá<br>Maracumango<br>Piña<br>Piña chamoy<br>Jamaica<br>Picamaica<br>Pepino-limón<br>Pepino-limón chamoy<br>Nieve de limón<br>Limón con chamoy<br>Limón con chía<br>Limonada rosa<br>Fresa<br>Fresandía Tajín<br>Sandía<br>Grosella<br>Uva</span>
+                    <span class="menu-group-items">Chicle azul<br>Chicle con chamoy<br>Tamarindo<br>Pulparindo<br>Panditas (limonada)<br>Azulito (mora azul)<br>Azulito con Chamoy<br>Lucas Chamoy<br>Pelon pelo rico<br>Pica fresa<br>Powerade Moras<br>Icee Cereza<br>Icee Mora Azul</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 15px;">100% Fruta Natural<br>Chamoy casero.</p>
+            </div>
+
+            <!-- CHOOSE ME PREMIUM -->
+            <div class="menu-category" style="border-top: 4px solid var(--accent);">
+                <h3 style="color: var(--accent); font-size: 1.5rem; text-transform: uppercase;">Choose Me</h3>
+                <h3 style="color: var(--primary); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 15px;">Premium</h3>
+                <div class="menu-price-row" style="margin-bottom: 20px;">
+                    <div class="price-tag">120 ml<br><strong style="color: var(--text);">$20</strong></div>
+                    <div class="price-tag">180 ml<br><strong style="color: var(--text);">$25</strong></div>
+                </div>
+                <div class="menu-items-grid" style="display: grid; grid-template-columns: 1fr; gap: 8px;">
+                    <span class="menu-group-items">Mazapán<br>Oreo<br>Príncipe<br>Canelitas<br>Chocoretas<br>Gansito<br>Pingüino<br>Sponch<br>Bubulubu<br>Nutella<br>Duvalín<br>Carlos V<br>Chocorrol piña<br>Cheesecake-fresa<br>Brownie</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--accent); margin-top: 15px;">🌸 Todos llevan topping</p>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Opcional: Leche deslactosada<br>Matcha: Leche de coco o avena</p>
+            </div>
+
+            <!-- PICK ME GOURMET -->
+            <div class="menu-category" style="border-top: 4px solid var(--accent);">
+                <h3 style="color: var(--accent); font-size: 1.5rem; text-transform: uppercase;">Pick Me</h3>
+                <h3 style="color: var(--primary); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 15px;">Gourmet</h3>
+                <div class="menu-price-row" style="margin-bottom: 20px;">
+                    <div class="price-tag">120 ml<br><strong style="color: var(--text);">$15</strong></div>
+                    <div class="price-tag">180 ml<br><strong style="color: var(--text);">$20</strong></div>
+                </div>
+                <div class="menu-items-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <span class="menu-group-items">Dulce de leche<br>Vainilla<br>Gloria con lechera<br>Maracuyá cremoso<br>Maracuyá-Nutella<br>Mango cremoso<br>Duraznos con crema<br>Fresa<br>Fresas con crema<br>Fresa-Nutella<br>Horchata<br>Cacahuate<br>Piña-coco<br>Yogurt fresa<br>Yogurt de durazno<br>Carlota mango<br>Carlota limón<br>Carlota de café<br>Banana split<br>Galleta María</span>
+                    <span class="menu-group-items">Triple Chocolate<br>Cappuchino Vainilla<br>Moka-Nutella<br>Chocolate Abuelita<br>Arroz con leche<br>Flan con caramelo<br>Pistache<br>Cajeta<br>Elote<br>Taro<br>Matcha coco<br>Matcha fresa<br>Matcha mango<br>Coco<br>Coco con Nuez<br>Cereza cremosa<br>Queso crema con zarzamora<br>Barbie : Chicle rosa con bombones</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 15px;">Opcional: Pídelos con leche deslactosada</p>
+            </div>
+
+            <!-- LOVE ME EDICIÓN ESPECIAL -->
+            <div class="menu-category" style="border-top: 4px solid var(--accent);">
+                <h3 style="color: var(--accent); font-size: 1.5rem; text-transform: uppercase;">Love Me</h3>
+                <h3 style="color: var(--primary); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 15px;">Edición Especial*</h3>
+                <div class="menu-price-row" style="margin-bottom: 20px;">
+                    <div class="price-tag">120 ml<br><strong style="color: var(--text);">$25</strong></div>
+                    <div class="price-tag">180 ml<br><strong style="color: var(--text);">$30</strong></div>
+                </div>
+                <div class="menu-items-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <span class="menu-group-items">Ferrero<br>Magnum<br>Kit kat<br>Kinder Sorpresa<br>Kinder Delice<br>Kinder Bueno<br>Lotus<br>Conejito Turín<br>Snickers<br>Milky way</span>
+                    <span class="menu-group-items">Kisse's<br>Rafaello<br>Selva negra<br>Chocolate Dubai<br>Fresas Dubai<br>Pistache White</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--accent); margin-top: 15px;">🌸 Ingredientes Originales</p>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">Opcional: Leche deslactosada</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <main class="app-frame" id="app">
+
+
+        
+        <!-- HERO SECTION -->
+        <header class="hero-section reveal">
+            <div class="hero-bg">
+                <div style="width: 100%; height: 100%; background: url('assets/Portada.jpg') center/cover no-repeat;"></div>
+                <div class="hero-overlay"></div>
+                <div class="particles-layer" id="snow-container"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="brand-prof-unit" data-tilt style="background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 35px rgba(255, 91, 189, 0.8), inset 0 0 15px rgba(255,255,255,0.3); border: 4px solid #ff85ce;">
+                    <span style="color: white; font-family: 'Quicksand', sans-serif; font-size: 5.5rem; font-weight: 700; line-height: 1; margin-top: -10px;">m</span>
+                </div>
+                
+                <h1 class="brand-name">Mango & Nata</h1>
+                <p class="brand-tagline">100% Fruta Natural. Chamoy casero.</p>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge"><i class="ri-map-pin-2-fill"></i> Veracruz</div>
+                    <div class="badge"><i class="ri-star-fill"></i> Sabor Único</div>
+                    <div class="badge"><i class="ri-heart-fill"></i> Ingredientes Originales</div>
+                </div>
+
+                <div class="action-grid">
+                    <a href="https://www.instagram.com/mangoinata/" target="_blank" class="action-pill"><i class="ri-instagram-line"></i></a>
+                    <a href="https://wa.me/522292645358" target="_blank" class="action-pill wa-pill"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#" onclick="openMenu(); return false;" class="action-pill"><i class="ri-restaurant-line"></i></a>
+                    <a href="#" onclick="toggleDarkMode(); return false;" class="action-pill" id="dark-mode-btn"><i class="ri-moon-line"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECONDARY CTA -->
+        <div class="secondary-cta reveal">
+            <button class="btn-secondary" onclick="openMenu()">
+                <i class="ri-menu-search-line"></i> Ver Catálogo Completo
+            </button>
+        </div>
+
+        <!-- MARQUEE TESTIMONIALS -->
+        <div class="marquee-wrapper reveal">
+            <div class="marquee-content">
+                <span class="marquee-item"><i class="ri-star-fill"></i> ¡Los hielitos de Ferrero volaron en la fiesta!</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> Súper cremosos, recomendados 100%</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> El mejor chamoy casero de Veracruz</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> Todos los invitados quedaron encantados</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> ¡Los hielitos de Ferrero volaron en la fiesta!</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> Súper cremosos, recomendados 100%</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> El mejor chamoy casero de Veracruz</span>
+                <span class="marquee-item"><i class="ri-star-fill"></i> Todos los invitados quedaron encantados</span>
+            </div>
+        </div>
+
+        <!-- CATALOGUE SECTION -->
+        <section class="reveal catalogue-section" style="position: relative; overflow: hidden; padding-top: 20px;">
+            <span class="section-label" style="position: relative; z-index: 2; color: var(--accent);">Paquetes para Eventos</span>
+            
+            <div class="boho-card">
+                <div class="card-top" style="background: url('assets/30_hielitos.jpg') center/cover no-repeat; position: relative;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(255, 91, 189, 0.9); padding: 4px 12px; border-radius: 20px; display: flex; align-items: baseline; backdrop-filter: blur(5px);">
+                        <h2 style="color: white; font-size: 1.2rem; font-family: 'Quicksand', sans-serif; margin: 0;">30</h2><p style="color: white; margin: 0 0 0 5px; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase;">Piezas</p>
+                    </div>
+                </div>
+                <div class="card-desc">
+                    <h3 style="color: var(--accent);">Paquete 30 Hielitos</h3>
+                    <p>Elige entre Base Agua, Premium o Edición Especial. 3 sabores a elegir. Presentación 100ml.</p>
+                    <span class="card-price" style="background: var(--accent);" onclick="openForm()">Desde $400</span>
+                </div>
+            </div>
+
+            <div class="boho-card">
+                <div class="card-top" style="background: url('assets/50_hielitos.jpg') center/cover no-repeat; position: relative;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(255, 91, 189, 0.9); padding: 4px 12px; border-radius: 20px; display: flex; align-items: baseline; backdrop-filter: blur(5px);">
+                        <h2 style="color: white; font-size: 1.2rem; font-family: 'Quicksand', sans-serif; margin: 0;">50</h2><p style="color: white; margin: 0 0 0 5px; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase;">Piezas</p>
+                    </div>
+                </div>
+                <div class="card-desc">
+                    <h3 style="color: var(--accent);">Paquete 50 Hielitos</h3>
+                    <p>Perfecto para reuniones medianas. 5 sabores a elegir. Presentación 100ml.</p>
+                    <span class="card-price" style="background: var(--accent);" onclick="openForm()">Desde $650</span>
+                </div>
+            </div>
+
+            <div class="boho-card">
+                <div class="card-top" style="background: url('assets/100_hielitos.jpg') center/cover no-repeat; position: relative;">
+                    <div style="position: absolute; top: 10px; right: 10px; background: rgba(255, 91, 189, 0.9); padding: 4px 12px; border-radius: 20px; display: flex; align-items: baseline; backdrop-filter: blur(5px);">
+                        <h2 style="color: white; font-size: 1.2rem; font-family: 'Quicksand', sans-serif; margin: 0;">100</h2><p style="color: white; margin: 0 0 0 5px; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase;">Piezas</p>
+                    </div>
+                </div>
+                <div class="card-desc">
+                    <h3 style="color: var(--accent);">Paquete 100 Hielitos</h3>
+                    <p>Ideal para eventos grandes. 10 sabores a elegir. Presentación 100ml.</p>
+                    <span class="card-price" style="background: var(--accent);" onclick="openForm()">Desde $1250</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div style="height: 40px;"></div>
+
+        <!-- FAQ SECTION -->
+        <section class="reveal faq-section" style="padding: 40px 20px; background: #fff; margin: 30px -20px 0; border-top-left-radius: 30px; border-top-right-radius: 30px; box-shadow: 0 -10px 20px rgba(0,0,0,0.03);">
+            <span class="section-label" style="margin-bottom: 10px;">Información Útil</span>
+            <h2 class="section-title-small" style="color: var(--primary); text-align: left; margin-bottom: 25px;">Preguntas Frecuentes</h2>
+            
+            <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
+                <h4 style="font-size: 1rem; color: var(--text); margin-bottom: 5px;"><i class="ri-time-line" style="color: var(--accent);"></i> ¿Con cuánto tiempo debo pedir?</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Recomendamos mínimo 1 semana de anticipación para garantizar disponibilidad de sabores especiales.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px;">
+                <h4 style="font-size: 1rem; color: var(--text); margin-bottom: 5px;"><i class="ri-map-pin-user-line" style="color: var(--accent);"></i> ¿Entregan en todo Veracruz?</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Sí, cubrimos zona conurbada Veracruz-Boca del Río. El costo de traslado se cotiza según tu código postal.</p>
+            </div>
+
+            <div class="faq-item" style="margin-bottom: 25px;">
+                <h4 style="font-size: 1rem; color: var(--text); margin-bottom: 5px;"><i class="ri-snowflake-line" style="color: var(--accent);"></i> ¿Llevan hielera?</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Entregamos el producto perfectamente congelado. Contamos con renta de hieleras estéticas para eventos.</p>
+            </div>
+
+            <div style="background: var(--bg); padding: 20px; border-radius: 20px; text-align: center;">
+                <h4 style="color: var(--primary); margin-bottom: 10px;"><i class="ri-store-2-line"></i> Horarios de Atención</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Lunes a Sábado: 10:00 AM - 7:00 PM<br>Domingos: Cerrado</p>
+            </div>
+        </section>
+
+        <div style="height: 120px;"></div>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!-- MULTI-STEP FORM OVERLAY (COTIZADOR REAL)     -->
+    <!-- ============================================ -->
+    <div class="form-overlay" id="form-view">
+        <div class="form-header">
+            <i class="ri-close-line" style="font-size: 1.5rem; cursor: pointer;" onclick="closeForm()"></i>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="form-progress"></div>
+            </div>
+            <span id="step-counter" style="font-size: 0.8rem; font-weight: 600; color: var(--primary);">1 / 6</span>
+        </div>
+
+        <div class="step-container">
+
+            <!-- ========== STEP 1: PAQUETES ========== -->
+            <div class="step active" id="step-1">
+                <h2 class="step-title">¿Qué paquete deseas?</h2>
+                <p class="step-desc">Elige la cantidad de hielitos para tu evento.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="30 Hielitos" onclick="selectStepOption(this, 1)">
+                        <i class="ri-shopping-bag-line"></i>
+                        <div>
+                            <strong>Paquete 30 Hielitos</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">3 sabores a elegir. Presentación 100ml.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="50 Hielitos" onclick="selectStepOption(this, 1)">
+                        <i class="ri-shopping-bag-3-line"></i>
+                        <div>
+                            <strong>Paquete 50 Hielitos</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">5 sabores a elegir. Presentación 100ml.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="100 Hielitos" onclick="selectStepOption(this, 1)">
+                        <i class="ri-gift-line"></i>
+                        <div>
+                            <strong>Paquete 100 Hielitos</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">10 sabores a elegir. Presentación 100ml.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 1b: BASE ========== -->
+            <div class="step" id="step-1b">
+                <h2 class="step-title" style="font-size: 1.2rem;">🍦 Selecciona la Base</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Define el tipo de hielitos para tu paquete.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="Clásico" onclick="selectStepOption(this, '1b')">
+                        <i class="ri-water-flash-line"></i>
+                        <div>
+                            <strong>Clásico (Agua o Gourmet)</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Base Agua o lácteos tradicionales</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Premium" onclick="selectStepOption(this, '1b')">
+                        <i class="ri-star-smile-line"></i>
+                        <div>
+                            <strong>Premium</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Sabores premium con toppings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Edición Especial" onclick="selectStepOption(this, '1b')">
+                        <i class="ri-sparkling-line"></i>
+                        <div>
+                            <strong>Edición Especial</strong>
+                            <div class="sub-options">
+                                <span class="sub-option">Ingredientes originales e importados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 1c: SABORES ========== -->
+            <div class="step" id="step-1c">
+                <h2 class="step-title" style="font-size: 1.2rem;">🍓 Elige tus sabores</h2>
+                <p class="step-desc" style="font-size: 0.8rem;">Selecciona hasta <span id="max-sabores-text">3</span> sabores.</p>
+                
+                <div class="sub-step-scroll" style="margin-top: 15px;">
+                    <div class="cat-group sabor-group" id="sg-agua" style="display: none;">
+                        <p class="cat-group-title">💧 Base Agua</p>
+                        <div class="topping-chips">
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Mango</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Mango-chamoy</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Maracuyá</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Piña</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Jamaica</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Pepino-limón</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Limón</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Fresa</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Sandía</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Chicle azul</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Tamarindo</div>
+                        </div>
+                    </div>
+                    <div class="cat-group sabor-group" id="sg-gourmet" style="display: none;">
+                        <p class="cat-group-title">🍨 Gourmet</p>
+                        <div class="topping-chips">
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Dulce de leche</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Vainilla</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Fresas con crema</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Fresa-Nutella</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Horchata</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Carlota limón</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Choco Abuelita</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Pistache</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Cajeta</div>
+                        </div>
+                    </div>
+                    <div class="cat-group sabor-group" id="sg-premium" style="display: none;">
+                        <p class="cat-group-title">✨ Premium</p>
+                        <div class="topping-chips">
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Mazapán</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Oreo</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Gansito</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Pingüino</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Nutella</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Brownie</div>
+                        </div>
+                    </div>
+                    <div class="cat-group sabor-group" id="sg-especial" style="display: none;">
+                        <p class="cat-group-title">👑 Edición Especial</p>
+                        <div class="topping-chips">
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Ferrero</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Magnum</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Kit kat</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Kinder Bueno</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Conejito Turín</div>
+                            <div class="chip sabor-chip" onclick="toggleSabor(this)">Snickers</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; text-align: center;">
+                    <span id="cnt-sabores" style="background: var(--primary-light); padding: 5px 15px; border-radius: 20px; color: var(--accent); font-weight: bold; font-size: 0.9rem;">0/3</span>
+                </div>
+            </div>
+
+            <!-- ========== STEP 2: TIPO DE EVENTO ========== -->
+            <div class="step" id="step-2">
+                <h2 class="step-title">Tipo de evento</h2>
+                <div class="form-options">
+                    <div class="pill-option" data-val="Cumpleaños infantil" onclick="selectStepOption(this, 2)">Cumpleaños infantil</div>
+                    <div class="pill-option" data-val="Bautizo / Primera comunión" onclick="selectStepOption(this, 2)">Bautizo / Primera comunión</div>
+                    <div class="pill-option" data-val="Fiesta familiar" onclick="selectStepOption(this, 2)">Fiesta familiar</div>
+                    <div class="pill-option" data-val="Evento corporativo" onclick="selectStepOption(this, 2)">Evento corporativo</div>
+                    <div class="pill-option" data-val="Boda / XV Años" onclick="selectStepOption(this, 2)">Boda / XV Años</div>
+                    <div class="pill-option" data-val="Otro" onclick="selectStepOption(this, 2)">Otro</div>
+                </div>
+            </div>
+
+            <!-- ========== STEP 3: FECHA ========== -->
+            <div class="step" id="step-3">
+                <h2 class="step-title">¿Cuándo es tu evento?</h2>
+                <p class="step-desc">Para revisar disponibilidad.</p>
+                <input type="date" id="event-date" class="form-input" onchange="validateStep(3)">
+            </div>
+
+            <!-- ========== STEP 4: LUGAR ========== -->
+            <div class="step" id="step-4">
+                <h2 class="step-title">¿Dónde será?</h2>
+                <p class="step-desc">Para estimar traslado y logística.</p>
+                <input type="text" id="event-location" class="form-input" placeholder="Ciudad o colonia" oninput="validateStep(4)">
+                <input type="text" id="event-venue" class="form-input" placeholder="Nombre del salón o domicilio" oninput="validateStep(4)">
+            </div>
+
+            <!-- ========== STEP 5: CONTACTO ========== -->
+            <div class="step" id="step-5">
+                <h2 class="step-title">Datos de contacto</h2>
+                <input type="text" id="contact-name" class="form-input" placeholder="Tu nombre" oninput="validateStep(5)">
+                <input type="tel" id="contact-wa" class="form-input" placeholder="Tu WhatsApp (10 dígitos)" oninput="validateStep(5)">
+            </div>
+
+            <!-- ========== STEP 6: RESUMEN + COTIZACIÓN ========== -->
+            <div class="step" id="step-6">
+                <h2 class="step-title">Tu Cotización ✨</h2>
+                <p class="step-desc">Revisa el resumen antes de enviarlo.</p>
+                <div id="quote-wrapper-capture" style="background: var(--bg); border-radius: 15px; padding: 15px;">
+                    <div id="quote-summary" class="quote-summary"></div>
+                    <div class="quote-total" id="quote-total"></div>
+                </div>
+                <button class="btn-secondary" style="width: 100%; margin-top: 15px;" onclick="downloadQuote()">
+                    <i class="ri-download-2-line"></i> Descargar Imagen
+                </button>
+            </div>
+
+        </div>
+
+        <div class="form-nav">
+            <button class="btn-form btn-prev" id="btn-prev" onclick="changeStep(-1)" style="visibility: hidden;">Anterior</button>
+            <button class="btn-form btn-next" id="btn-next" onclick="changeStep(1)" disabled>Siguiente</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- LIGHTBOX OVERLAY                             -->
+    <!-- ============================================ -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Vista previa">
+    </div>
+
+    <!-- FLOATING CTA -->
+    <div class="fixed-cta reveal">
+        <button class="btn-boutique" onclick="openForm()">
+            Cotizar Mi Evento ✨
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="js/app.js" charset="UTF-8"></script>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- TREZE SIGNATURE V4 -->
+<div class="treze-footer-watermark" style="text-align: center; font-size: 14px; color: #888; padding: 60px 20px 120px 20px; font-family: sans-serif; opacity: 1; width: 100%; border-top: 1px solid rgba(136, 136, 136, 0.1);">
+    <p style="margin: 0 0 8px 0; font-weight: 400; font-size: 13px;">&copy; 2026 Reservados todos los derechos.</p>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+        <span style="font-weight: 500; font-size: 13px;">Desarrollado por</span>
+        <a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; align-items: center; text-decoration: none; -webkit-tap-highlight-color: transparent; outline: none; border: none; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.8'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+            <img src="treze_footer.png" alt="Treze Labs" style="height: 32px; object-fit: contain; filter: brightness(0);">
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
